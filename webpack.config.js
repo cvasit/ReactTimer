@@ -1,44 +1,44 @@
-var webpack=require('webpack');
+var webpack = require('webpack');
 
-module.exports={
-    entry:[
+module.exports = {
+    entry: [
         'script!jquery/dist/jquery.min.js',
         'script!foundation-sites/dist/foundation.min.js',
-        './app/app.js',
+        './app/app.js'
     ],
-    externals:{
-      jquery:'jQuery'
+    externals: {
+        jquery: 'jQuery'
     },
-    plugins:[
+    plugins: [
         new webpack.ProvidePlugin({
-            '$':'jquery' ,
-            'jQ':'jquery'
+            '$': 'jquery',
+            'jQuery': 'jquery'
         })
     ],
-    output:{
+    output: {
         path: __dirname,
-        filename:'./public/bundle.js'
+        filename: './public/bundle.js'
     },
-    resolve:{
+    resolve: {
         root: __dirname,
-        alias:{
-            Main :'app/components/Main.js',
-            Navigation :'app/components/Navigation.js',
-            applicationStyles: 'app/styles/app.scss'
+        alias: {
+            Main: 'app/components/Main.js',
+            applicationStyles: 'app/styles/app.scss',
+            Navigation: 'app/components/Navigation.js'
         },
-        extensions:['','.js','.jsx']
+        extensions: ['', '.js', '.jsx']
     },
-    module:{
-        loaders:[
+    module: {
+        loaders: [
             {
-            loader:'babel-loader',
-            query:{
-            presets:['react','es2015','stage-0']
-            },
-        test: /\.jsx?$/,
-        exclude:/(node_nodules | bower_components)/
-        }
+                loader: 'babel-loader',
+                query: {
+                    presets: ['react', 'es2015', 'stage-0']
+                },
+                test: /\.js?$/,
+                exclude: /(node_modules|bower_components)/
+            }
         ]
     },
-    devtool:'cheap-module-eval-source-map'
+    devtool: 'cheap-module-eval-source-map'
 };

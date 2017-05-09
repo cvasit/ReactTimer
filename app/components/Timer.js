@@ -1,3 +1,9 @@
-/**
- * Created by Simham on 5/9/2017.
- */
+var React=require('react');
+
+var Timer =React.createClass({
+    render: function () {
+        return (<p>Timer Component</p>)
+    }
+});
+
+module.exports=Timer;

@@ -11,7 +11,7 @@ var Navigation=()=>{
                             <Link to="/" activeClassName="active" activeStyle={{fontWeight:'bold'}}>Timer</Link>
                         </li>
                         <li>
-                            <Link to="/" activeClassName="active" activeStyle={{fontWeight:'bold'}}>Countdown</Link>
+                            <Link to="/Countdown" activeClassName="active" activeStyle={{fontWeight:'bold'}}>Countdown</Link>
                         </li>
                     </ul>
 

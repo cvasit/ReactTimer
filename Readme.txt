@@ -3,4 +3,9 @@
 2. mistakes i made
  karma.conf.js was named as karma.config.js
  once corrected to karma.conf.js
-
+3.IndexRoute doesnot take a path. 
+4. npm install react-addons-test-utils@0.14.6 --save-dev
+5.How to create instance of a component in a test class.
+Use:function renderIntoDocument(<Component/>) to create an instance of the component being
+tested.This is available in 'react-addons-test-utils' module.
+6. _clock.scss is name with _ prefix becos it is partial.
